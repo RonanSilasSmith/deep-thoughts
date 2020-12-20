@@ -1,9 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/react-hooks';
-import { QUERY_THOUGHT } from '../utils/queries';
+
 import ReactionList from '../components/ReactionList';
 
+import { useQuery } from '@apollo/react-hooks';
+import { QUERY_THOUGHT } from '../utils/queries';
 
 const SingleThought = props => {
   const { id: thoughtId } = useParams();
@@ -25,7 +26,7 @@ const SingleThought = props => {
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}
           </span>{' '}
-      thought on {thought.createdAt}
+          thought on {thought.createdAt}
         </p>
         <div className="card-body">
           <p>{thought.thoughtText}</p>

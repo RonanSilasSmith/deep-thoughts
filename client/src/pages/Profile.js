@@ -2,13 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import ThoughtList from '../components/ThoughtList';
+import FriendList from '../components/FriendList';
 
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER } from '../utils/queries';
 
-import FriendList from '../components/FriendList';
-
-const Profile = () => {
+const Profile = props => {
   const { username: userParam } = useParams();
 
   const { loading, data } = useQuery(QUERY_USER, {
