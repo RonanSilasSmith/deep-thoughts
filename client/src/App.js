@@ -1,8 +1,8 @@
 import React from 'react';
 
-// add these two library import statements
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
